@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "# Live Assignment 7\n### Chris Donlan\n### 11/7/16\n### MSDS 6306\n\n#Project Structure\n*LiveAssignment.r - R source code\n*LiveAssignment.rmd - R Markdown report\n*LiveAssignment.md - Markdown version of report\n*LiveAssignment.html - HTML version of report\n",
+    "contents" : "# Live Assignment 7\n### Chris Donlan\n### 11/7/16\n### MSDS 6306\n\n#Project Structure\n* LiveAssignment.r - R source code\n* LiveAssignment.rmd - R Markdown report\n* LiveAssignment.md - Markdown version of report\n* LiveAssignment.html - HTML version of report\n",
     "created" : 1478540297739.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "3062562433",
+    "hash" : "3767236361",
     "id" : "6476721E",
-    "lastKnownWriteTime" : 1478540491,
-    "last_content_update" : 1478540491780,
+    "lastKnownWriteTime" : 1478540642,
+    "last_content_update" : 1478540642332,
     "path" : "~/School/IntroDS/Unit 7/LiveAssignment7/README.md",
     "project_path" : "README.md",
     "properties" : {
