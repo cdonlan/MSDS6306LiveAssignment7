@@ -2,9 +2,13 @@
 title: "Live Assignment 7"
 author: "Chris Donlan"
 date: "November 7, 2016"
-output: md_document
+output: html_document
 ---
 
+#Live Assignment 7
+
+##Overview
+This assignment highlights how to create function, through example of numeric base conversion. 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -108,4 +112,17 @@ baseKto10 <- function(k,x){
   
   return(result)
 }
+```
+
+## Run the functions
+```{r }
+#run p7
+p7(15)
+
+#run base10to7
+base10to7(100)
+
+#run base7to10
+base7to10(202)
+
 ```

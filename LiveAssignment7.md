@@ -1,3 +1,12 @@
+Live Assignment 7
+=================
+
+Overview
+--------
+
+This assignment highlights how to create function, through example of
+numeric base conversion.
+
 Part B
 ------
 
@@ -106,3 +115,21 @@ results.
       
       return(result)
     }
+
+Run the functions
+-----------------
+
+    #run p7
+    p7(15)
+
+    ##  [1]  0  1  2  3  4  5  6 10 11 12 13 14 15 16 20
+
+    #run base10to7
+    base10to7(100)
+
+    ## [1] 202
+
+    #run base7to10
+    base7to10(202)
+
+    ## [1] 100
