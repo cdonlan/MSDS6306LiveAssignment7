@@ -1,0 +1,108 @@
+Part B
+------
+
+Per the instruction, Part B was completed first. This function takes a
+single numeric argument and convert the number from base 10 to base 7.
+Function returns numeric results.
+
+    #part B
+    base10to7<-function(x){
+      
+      if(!is.numeric(x))
+        stop("Argurment must be numeric")
+      
+      i=0
+      sum=0
+      while(x%/%7!=0){
+        sum<-sum+((x%%7)*(10^i))
+        i=i+1
+        x<-x%/%7
+      }
+      sum<-sum+((x%%7)*(10^i))
+      return(sum)
+    }
+
+Part A
+------
+
+This function takes a single numeric argument and counts up to that
+number in base 7. Function returns numeric results.
+
+    #part A
+    p7 <-function(x) 
+    {
+      if(!is.numeric(x))
+        stop("Argurment must be numeric")
+      
+      results <- c()
+      i = 0
+      
+      while(i < x)
+      {
+        results <- c(results,base10to7(i))
+        i <- i +1
+      }
+      
+      return(results)
+    }
+
+Part C
+------
+
+This function takes a single numeric argrument and converts it from base
+7 to base 10. Function returns numeric results.
+
+    #part C
+    base7to10 <- function(x){
+      
+      if(!is.numeric(x))
+        stop("Argurment must be numeric")
+      
+      y <-nchar(x)
+      result = 0
+      for(i in 1:y)
+      {
+        #print(y)
+        digit <- as.numeric(substr(x,(y-i+1),(y-i+1)))
+        #print(digit)
+        converted <-digit*(7^(i-1))
+        
+        #print(converted)
+        result <- result + converted
+      }
+      
+      return(result)
+    }
+
+Part D
+------
+
+This function takes two numeric arguments. The first argument, is the
+base which is being convert from to base base 10. The second argument,
+is the number which is being converted. Function returns numeric
+results.
+
+    #part D
+    baseKto10 <- function(k,x){
+      
+      if(!is.numeric(k))
+        stop("First argurment must be numeric")
+      
+      if(!is.numeric(x))
+        stop(" Second argurment must be numeric")
+      
+      xchar <-nchar(x)
+      result = 0
+      for(i in 1:xchar)
+      {
+        #print(y)
+        digit <- as.numeric(substr(x,(xchar-i+1),(xchar-i+1)))
+        #print(digit)
+        converted <-digit*(k^(i-1))
+        
+        #print(converted)
+        result <- result + converted
+      }
+      
+      return(result)
+    }

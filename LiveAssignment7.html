@@ -168,6 +168,10 @@ p7 &lt;-function(x)
 <p>This function takes a single numeric argrument and converts it from base 7 to base 10. Function returns numeric results.</p>
 <pre class="r"><code>#part C
 base7to10 &lt;- function(x){
+  
+  if(!is.numeric(x))
+    stop(&quot;Argurment must be numeric&quot;)
+  
   y &lt;-nchar(x)
   result = 0
   for(i in 1:y)
@@ -189,6 +193,13 @@ base7to10 &lt;- function(x){
 <p>This function takes two numeric arguments. The first argument, is the base which is being convert from to base base 10. The second argument, is the number which is being converted. Function returns numeric results.</p>
 <pre class="r"><code>#part D
 baseKto10 &lt;- function(k,x){
+  
+  if(!is.numeric(k))
+    stop(&quot;First argurment must be numeric&quot;)
+  
+  if(!is.numeric(x))
+    stop(&quot; Second argurment must be numeric&quot;)
+  
   xchar &lt;-nchar(x)
   result = 0
   for(i in 1:xchar)
