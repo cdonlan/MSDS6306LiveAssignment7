@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"Live Assignment 7\"\nauthor: \"Chris Donlan\"\ndate: \"November 7, 2016\"\noutput: html_document\n---\n\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\n```\n\n##Part B\nPer the instruction, Part B was completed first. This function takes a single numeric argument and convert the number from base 10 to base 7. Function returns numeric results.\n```{r }\n#part B\nbase10to7<-function(x){\n  \n  if(!is.numeric(x))\n    stop(\"Argurment must be numeric\")\n  \n  i=0\n  sum=0\n  while(x%/%7!=0){\n    sum<-sum+((x%%7)*(10^i))\n    i=i+1\n    x<-x%/%7\n  }\n  sum<-sum+((x%%7)*(10^i))\n  return(sum)\n}\n```\n\n##Part A\nThis function takes a single numeric argument and counts up to that number in base 7. Function returns numeric results.\n```{r }\n#part A\np7 <-function(x) \n{\n  if(!is.numeric(x))\n    stop(\"Argurment must be numeric\")\n  \n  results <- c()\n  i = 0\n  \n  while(i < x)\n  {\n    results <- c(results,base10to7(i))\n    i <- i +1\n  }\n  \n  return(results)\n}\n```\n\n##Part C\nThis function takes a single numeric argrument and converts it from base 7 to base 10. Function returns numeric results.\n```{r }\n#part C\nbase7to10 <- function(x){\n  \n  if(!is.numeric(x))\n    stop(\"Argurment must be numeric\")\n  \n  y <-nchar(x)\n  result = 0\n  for(i in 1:y)\n  {\n    #print(y)\n    digit <- as.numeric(substr(x,(y-i+1),(y-i+1)))\n    #print(digit)\n    converted <-digit*(7^(i-1))\n    \n    #print(converted)\n    result <- result + converted\n  }\n  \n  return(result)\n}\n}\n```\n\n##Part D\nThis function takes two numeric arguments. The first argument, is the base which is being convert from to base base 10. The second argument, is the number which is being converted. Function returns numeric results.\n```{r }\n#part D\nbaseKto10 <- function(k,x){\n  xchar <-nchar(x)\n  result = 0\n  for(i in 1:xchar)\n  {\n    #print(y)\n    digit <- as.numeric(substr(x,(xchar-i+1),(xchar-i+1)))\n    #print(digit)\n    converted <-digit*(k^(i-1))\n    \n    #print(converted)\n    result <- result + converted\n  }\n  \n  return(result)\n}\n\n```",
+    "created" : 1478522994540.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3259926261",
+    "id" : "433A750C",
+    "lastKnownWriteTime" : 1478524409,
+    "last_content_update" : 1478524409400,
+    "path" : "~/School/IntroDS/Unit 7/LiveAssignment7/LiveAssignment7.Rmd",
+    "project_path" : "LiveAssignment7.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
